@@ -10,7 +10,7 @@ function OrderStatus(){
 
         function updatestatus()
         {
-            setOrder({...order,status:document.getElementById("languages").value});
+            setOrder({...order,status:document.getElementById("statuslist").value}); //set the status by reading dropdown value and re-renders
         }
 
         return (
@@ -19,7 +19,7 @@ function OrderStatus(){
                 <h1>{order.status}</h1>
                 <h1>{order.customer}</h1>
                 <h1>{order.items}</h1>
-                <select name="statuslist" id="languages">
+                <select name="statuslist" id="statuslist">
                     <option value="Processing">Processing</option>
                     <option value="Shipped">Shipped</option>
                     <option value="Delivered">Delivered</option>
