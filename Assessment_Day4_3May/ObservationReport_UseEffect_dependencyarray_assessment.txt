@@ -1,0 +1,19 @@
+Following useEffects configurations were used
+
+1. useEffect with an empty dependency array 
+-This will be called only during the first load and not on every render
+
+2. useEffect with no dependency array
+-Since there is no dependency so this will be called on load as well as during every render
+
+3. useEffect with `name` as the dependency.
+-Since the dependency is on name array, hence this will be called every time name is re-redered.
+-Also since we are initializing name as empty during load which also renders it, hence it will be called during load as well.
+
+4. useEffect with `counter` as the dependency.
+-Since the dependency is on counter array, hence this will be called every time counter is re-redered.
+-Also since we are initializing counter as 0 during load which also renders it, hence it will be called during load as well.
+
+5. useEffect with both `name` and `counter` as dependencies.
+-Since the dependency is on counter as well as name array, hence this will be called every time counter or name is re-redered.
+-Also since we are initializing counter and name during load which also renders it, hence it will be called during load as well.
